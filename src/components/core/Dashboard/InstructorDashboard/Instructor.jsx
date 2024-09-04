@@ -55,7 +55,7 @@ const Instructor = () => {
           <div className="spinner"></div>
         ) : courses.length > 0 ? (
           <div>
-            <div className="my-4 flex h-[450px] space-x-4">
+            <div className="my-4 flex h-[450px] w-full space-x-4 overflow-x-hidden">
               {/* Render chart / graph */}
               {totalAmount > 0 || totalStudents > 0 ? (
                 <InstructorChart courses={instructorData} />
@@ -96,7 +96,7 @@ const Instructor = () => {
             </div>
             <div className="rounded-md bg-richblack-800 p-6">
               {/* Render 3 courses */}
-              <div className="flex items-center justify-between">
+              <div className="flex  items-center justify-between">
                 <p className="text-lg font-bold text-richblack-5">
                   Your Courses
                 </p>
@@ -106,15 +106,15 @@ const Instructor = () => {
                   </p>
                 </Link>
               </div>
-              <div className="my-4 flex items-start space-x-6">
+              <div className="my-4 flex lg:flex-row flex-col items-start lg:space-x-6">
                 {courses.slice(0, 3).map((course) => (
-                  <div key={course._id} className="w-1/3">
+                  <div key={course._id} className="w-full mb-2">
                     <img
                       src={course.thumbnail}
                       alt={course.courseName}
                       className="h-[201px] w-full rounded-md object-cover"
                     />
-                    <div className="mt-3 w-full">
+                    <div className="mt-3 w-full ">
                       <p className="text-sm font-medium text-richblack-50">
                         {course.courseName}
                       </p>
