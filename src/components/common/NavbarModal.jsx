@@ -95,9 +95,9 @@ const NavbarModal = ({ display, setDisplay }) => {
           ))}
 
           {token === null && (
-            <IconBtn to={"/login"}>
+            <IconBtn >
               <button
-                onclick={() => handleModal()}
+                onClick={() => {handleModal();navigate("/login")}}
                 className=" flex  rounded-md  items-center gap-x-1   "
               >
                 Log in
@@ -116,9 +116,9 @@ const NavbarModal = ({ display, setDisplay }) => {
             </Link>
           )}
           {token !== null && (
-            <IconBtn to={"/dashboard/my-profile"}>
+            <IconBtn >
               <button
-                onclick={() => handleModal()}
+                onclick={() => {handleModal();navigate("/dashboard/my-profile");}}
                 className=" flex  rounded-md  items-center gap-x-1   "
               >
                 <VscDashboard className="text-lg" />
