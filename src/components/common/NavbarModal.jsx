@@ -97,7 +97,7 @@ const NavbarModal = ({ display, setDisplay }) => {
           {token === null && (
             <IconBtn to={"/login"}>
               <button
-                onClick={() => handleModal()}
+                onclick={() => handleModal()}
                 className=" flex  rounded-md  items-center gap-x-1   "
               >
                 Log in
