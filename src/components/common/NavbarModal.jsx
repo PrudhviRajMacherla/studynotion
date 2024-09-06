@@ -117,13 +117,13 @@ const NavbarModal = ({ display, setDisplay }) => {
           )}
           {token !== null && (
             <IconBtn >
-              <button
+              
                 onclick={() => {handleModal();navigate("/dashboard/my-profile");}}
                 className=" flex  rounded-md  items-center gap-x-1   "
               >
                 <VscDashboard className="text-lg" />
                 Dashboard
-              </button>
+              
             </IconBtn>
           )}
           {token !== null && (
