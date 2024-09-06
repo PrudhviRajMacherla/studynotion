@@ -95,9 +95,12 @@ const NavbarModal = ({ display, setDisplay }) => {
           ))}
 
           {token === null && (
-            <IconBtn >
+            <IconBtn>
               <button
-                onClick={() => {handleModal();navigate("/login")}}
+                onClick={() => {
+                  handleModal();
+                  navigate("/login");
+                }}
                 className=" flex  rounded-md  items-center gap-x-1   "
               >
                 Log in
@@ -116,21 +119,29 @@ const NavbarModal = ({ display, setDisplay }) => {
             </Link>
           )}
           {token !== null && (
-            <IconBtn >
-              
-                onclick={() => {handleModal();navigate("/dashboard/my-profile");}}
-                className=" flex  rounded-md  items-center gap-x-1   "
-              >
+            <IconBtn
+              onclick={() => {
+                handleModal();
+                navigate("/dashboard/my-profile");
+              }}
+            >
+         
                 <VscDashboard className="text-lg" />
                 Dashboard
               
             </IconBtn>
           )}
           {token !== null && (
-           <button onClick={ ()=>(dispatch(logout(navigate)) , handleModal()) } className='text-white rounded-md flex  items-center gap-x-1 py-[8px] px-[12px] text-sm bg-richblack-800  hover:bg-richblack-700 hover:text-richblack-25'>
-                            <VscSignOut className='text-lg'/>
-                            Logout
-                            </button>
+            <IconBtn
+              onclick={() => {
+                dispatch(logout(navigate));
+                handleModal();
+              }}
+              className=" flex  rounded-md  items-center gap-x-1   "
+            >
+              <VscSignOut className="text-lg" />
+              Logout
+            </IconBtn>
           )}
           {user?.accountType === ACCOUNT_TYPE.STUDENT && (
             <Link to={"/dashboard/enrolled-courses"}>
