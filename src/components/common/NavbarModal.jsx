@@ -127,16 +127,10 @@ const NavbarModal = ({ display, setDisplay }) => {
             </IconBtn>
           )}
           {token !== null && (
-            <IconBtn
-              onclick={() => {
-                dispatch(logout(navigate));
-                handleModal();
-              }}
-              className=" flex  rounded-md  items-center gap-x-1   "
-            >
-              <VscSignOut className="text-lg" />
-              Logout
-            </IconBtn>
+           <button onClick={ ()=>(dispatch(logout(navigate)) , handleModal()) } className='text-white rounded-md flex  items-center gap-x-1 py-[8px] px-[12px] text-sm bg-richblack-800  hover:bg-richblack-700 hover:text-richblack-25'>
+                            <VscSignOut className='text-lg'/>
+                            Logout
+                            </button>
           )}
           {user?.accountType === ACCOUNT_TYPE.STUDENT && (
             <Link to={"/dashboard/enrolled-courses"}>
