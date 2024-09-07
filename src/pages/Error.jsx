@@ -11,11 +11,11 @@ const Error = () => {
                 <div class="relative">
                     <div class="absolute">
                         <div class="">
-                            <h1 class="my-2 text-gray-800 font-bold text-3xl">
+ <h1 class="my-2 text-pink-400 font-bold text-3xl">
                                 Looks like you've found the
                                 doorway to the great nothing
                             </h1>
-                            <p class="my-2 text-gray-800">Sorry about that! Please visit our hompage to get where you need to go.</p>
+                            <p class="my-2 text-pink-400">Sorry about that! Please visit our hompage to get where you need to go.</p>
                             <IconBtn
                             onclick={()=>navigate("/")}>
                               Take Me Back
